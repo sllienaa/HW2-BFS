@@ -1,3 +1,5 @@
+![BuildStatus](https://github.com/sllienaa/HW2-BFS/actions/workflows/test.yml/badge.svg?event=push)
+
 # Assignment 2
 Breadth-first search
 
@@ -25,6 +27,15 @@ In test/test_bfs.py:
 * Test at least 2 possible edge cases (listed above)
 * Include a test case that fails and raises an exception
 
+## Bread First Search Methods
+This implementation of breadth first search (BFS) creates a Graph class containing the bfs() function. networkx is imported for graph initialization.
+
+bfs() takes in a networkx graph, a start node, and an optional end node. bfs() does not run if no start node is provided, the graph is unconnected, the start/end node does not exist in the graph, or the graph is empty.
+
+If no edge case is detected, bts() initializes lists for the queue, visited nodes, and a predecessors dictionary used to find the shortest path if there is an end node. The current starting node is added to the queue and visited lists. While there are items in the queue, the neighbors of the oldest node in the queue is visited and added to the queue, and this continues until the queue is empty. In the predecessors dictionary, the neighbor is added as the key and the current node is added as value to keep track.
+
+If no end point was given, visited nodes are returned. If an end point is given and a path exists between the start and end, 
+bfs() traces the path from the end node back to the start and returns the shortest path. However, the shortest path implementation only works for weighted graphs. If there was an end point inputted, but no path exists between the start and end, bfs() returns None.
 
 ## Software Development Assessment
 
